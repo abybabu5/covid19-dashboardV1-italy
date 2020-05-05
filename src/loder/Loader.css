@@ -1,0 +1,23 @@
+.loading {
+    /*min-height:200px;*/
+    display: flex;
+    text-align:center;
+    width: 100vw;
+}
+
+.svg-div {
+    margin: auto;
+}
+
+
+path {
+    stroke-dasharray: 250;
+    stroke-dashoffset: 0;
+    animation: dash 3s linear infinite forwards;
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: 500;
+    }
+}
