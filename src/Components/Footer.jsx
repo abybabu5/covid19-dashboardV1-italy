@@ -1,11 +1,6 @@
 import React, {Component} from 'react';
-import {Link} from "react-router-dom";
 import dpc from "../images/dpc.png"
-import Navbar from "react-bootstrap/Navbar";
-import corona from "../icon/icons8-coronavirus-48.png";
-import Nav from "react-bootstrap/Nav";
-import Form from "react-bootstrap/Form";
-import mapIcon from "../icon/icons8-map-marker-96.png";
+
 
 class Footer extends Component {
     render() {

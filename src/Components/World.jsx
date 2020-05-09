@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import ApiWorld from "../Api/ApiWorld";
 import Loader from "../loder/Loader";
+import 'react-bootstrap-table2-toolkit/dist/react-bootstrap-table2-toolkit.min.css';
+import {SearchableTable} from "./SearchableTable";
+
 
 class World extends Component {
     constructor() {
@@ -11,53 +14,68 @@ class World extends Component {
         }
     }
 
+
     componentDidMount() {
         setTimeout(() => {
-        ApiWorld.fetch("countries")
-            .then(res => this.setState({
-                loading: false,
-                data: res}))
-    } ,3000)
+            ApiWorld.fetch("countries")
+                .then(res => {
+                    res.map((i, index) => {
+                        i.id = index;
+                        return i;
+                    })
+                    this.setState({
+                        loading: false,
+                        data: res
+                    })
+                })
+        }, 3000)
     }
+
     render() {
         if (this.state.loading) {
             return (
                 <div style={{display: 'flex', height: '100vh'}}>
-                    <Loader/>
+                    <Loader/> <Loader/>
                 </div>)
         }
+        const columns = [{
+            dataField: '',
+            text: '',
+            headerStyle: {width: '100px', backgroundColor: 'transparent'},
+            style: (cell, row, rowIndex, colIndex) => {
+                return {
+                    backgroundImage: "url('" + row.countryInfo.flag + "')",
+                    backgroundSize: "100px 50px",
+                    backgroundRepeat: 'no-repeat',
+                    backgroundPosition: 'center',
+
+
+                }
+            }
+        }, {
+            dataField: 'country',
+            text: 'Country',
+            sort: true
+        }, {
+            dataField: 'cases',
+            text: 'Total Cases',
+            sort: true,
+            align: 'right'
+        }, {
+            dataField: 'recovered',
+            text: 'Recovered',
+            sort: true,
+            align: 'right'
+        }, {
+            dataField: 'deaths',
+            text: 'Death',
+            sort: true,
+            align: 'right'
+        }
+        ];
         return (
-            <div className="container world-container">
-                <div className="row">
-                    <div className="col-md-12">
-                        <table className="table table-primary table-bordered table-striped">
-                            <thead>
-                            <tr className="table-warning">
-                                <td>Country</td>
-                                <td>Total Cases</td>
-                                <td>Recovered</td>
-                                <td>Death</td>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            {this.state.data.map((item) => {
-                                return (
-                                    <tr>
-                                        <td className="m-auto p-2"><img style={{width: "40px", borderRadius :"10%"}} src={item.countryInfo.flag}
-                                                 alt=""/>
-                                           <span className="pl-1">{item.country}</span> </td>
-                                        <td align="right">{item.cases}</td>
-                                        <td align="right">{item.recovered}</td>
-                                        <td align="right">{item.deaths}</td>
-
-
-                                    </tr>
-                                )
-                            })}
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+            <div className="container">
+                <SearchableTable data={this.state.data} columns={columns}/>
             </div>
         );
     }

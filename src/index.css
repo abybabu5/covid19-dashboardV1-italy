@@ -61,6 +61,30 @@ h4 {
     margin-top: 50px !important;
 }
 
+.world-container table {
+    background-color: white;
+    border-radius: 5px;
+}
+
+.world-map:hover {
+    -ms-transform: scale(1.8);
+    -webkit-transform: scale(1.8);
+    transform: scale(1.1);
+}
+
+.search-bar {
+    display: flex;
+}
+
+.search-bar input {
+    /*margin-right: 30px;*/
+}
+
+
+.italy-container {
+
+}
+
 .card {
-margin-top: 10px;
+    margin-top: 10px;
 }

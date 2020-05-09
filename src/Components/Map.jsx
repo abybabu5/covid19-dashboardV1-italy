@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import {Map, TileLayer, Marker, Popup} from 'react-leaflet'
 import ApiGithub from "../Api/ApiGithub";
 import * as L from "leaflet";
+import Footer from "./Footer";
 
 
 export default class CovidMap extends Component {
@@ -40,7 +41,8 @@ export default class CovidMap extends Component {
         const position = [this.state.lat, this.state.lng]
         return (
             <div>
-                <button type="button" className="btn btn-success change-button" onClick={this.change}>{this.state.show?"DISTRICT":'REGIONS'}</button>
+                <button type="button" className="btn btn-success change-button"
+                        onClick={this.change}>{this.state.show ? "REGIONS" : 'PROVINCES'}</button>
                 <Map center={position} zoom={this.state.zoom} style={{width: "100%", height: "calc(100vh - 64px)"}}>
                     <TileLayer
                         attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

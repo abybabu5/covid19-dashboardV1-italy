@@ -6,6 +6,7 @@ import mapItalia from "../images/map-italia.png"
 import Provinces from "./Provinces";
 import Accordion from "react-bootstrap/Accordion";
 import Loader from "../loder/Loader";
+import Footer from "./Footer";
 
 
 class Italia extends Component {
@@ -41,7 +42,7 @@ class Italia extends Component {
                 </div>)
         }
         return (
-            <div className="container align-content-center">
+            <div className="container align-content-center italy-container">
                 <div className="row mb-2 mt-5">
                     <div className="col-md-12 d-flex justify-content-center align-items-center">
                         <div className="mr-2 mt-3 mb-3">
