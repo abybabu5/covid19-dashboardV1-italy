@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {Card} from 'react-bootstrap';
 import ApiWorldCurrent from "../Api/ApiWorldCurrent";
-import ApiGlobalToday from "../Api/ApiGlobalToday";
 
 
 class WorldCurrentCard extends Component {

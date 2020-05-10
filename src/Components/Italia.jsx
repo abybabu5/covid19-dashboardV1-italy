@@ -6,7 +6,7 @@ import mapItalia from "../images/map-italia.png"
 import Provinces from "./Provinces";
 import Accordion from "react-bootstrap/Accordion";
 import Loader from "../loder/Loader";
-import Footer from "./Footer";
+import {Link} from "react-router-dom";
 
 
 class Italia extends Component {
@@ -45,9 +45,11 @@ class Italia extends Component {
             <div className="container align-content-center italy-container">
                 <div className="row mb-2 mt-5">
                     <div className="col-md-12 d-flex justify-content-center align-items-center">
-                        <div className="mr-2 mt-3 mb-3">
-                            <img style={{width: "100px"}} src={mapItalia} alt=""/>
-                            {/*<img src="https://www.countryflags.io/it/shiny/64.png" />*/}
+                        <div className="map-italy mr-2 mt-3 mb-3">
+                            <Link to="/map/italy">
+                                <img style={{width: "100px"}} src={mapItalia} alt=""/>
+                                {/*<img src="https://www.countryflags.io/it/shiny/64.png" />*/}
+                            </Link>
                         </div>
                         <div><h1 style={{color: "white"}}>ITALY</h1></div>
                     </div>

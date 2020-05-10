@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import ApiGithub from "../Api/ApiGithub";
-import {Accordion, Button, Card, Table} from "react-bootstrap";
+import {Accordion, Button, Card} from "react-bootstrap";
 import 'react-bootstrap-table2-toolkit/dist/react-bootstrap-table2-toolkit.min.css';
 import {SearchableTable} from "./SearchableTable";
 

@@ -15,10 +15,10 @@ export default class CovidWorldMap extends Component {
         show: false
     }
     myIcon = L.icon({
-        iconUrl: 'http://aby.ariken.it/images/icons8-coronavirus-map.png',
-        iconSize: [24, 24],
-        iconAnchor: [12, 0],
-        popupAnchor: [0, 0],
+        iconUrl: 'http://aby.ariken.it/images/iconfinder_virus-covid19-corona-coronavirus-location_6000540.svg',
+        iconSize: [32, 32],
+        iconAnchor: [16, 32],
+        popupAnchor: [0, -18],
         // shadowUrl: 'my-icon-shadow.png',
         // shadowSize: [68, 95],
         // shadowAnchor: [22, 94]

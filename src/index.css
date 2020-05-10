@@ -50,7 +50,14 @@ h4 {
     position: fixed !important;
     bottom: 0 !important;
     width: 100vw;
+    height: 5vh;
+
 }
+
+/*.footer-copyright {*/
+/*    margin-bottom: 5px !important;*/
+/*    padding-top: 3px!important;*/
+/*}*/
 
 .main-container {
     padding-bottom: 50px !important;
@@ -72,6 +79,12 @@ h4 {
     transform: scale(1.1);
 }
 
+.map-italy:hover {
+    -ms-transform: scale(1.8);
+    -webkit-transform: scale(1.8);
+    transform: scale(1.1);
+}
+
 .search-bar {
     display: flex;
 }
@@ -80,11 +93,11 @@ h4 {
     /*margin-right: 30px;*/
 }
 
-
-.italy-container {
-
-}
-
 .card {
     margin-top: 10px;
+}
+
+.corona-nav-img {
+    padding: 5px 5px 4px 6px;
+
 }

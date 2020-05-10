@@ -5,12 +5,12 @@ import dpc from "../images/dpc.png"
 class Footer extends Component {
     render() {
         return (
-            <div>
+            <div className="mt-5">
                 <footer className="page-footer font-small bg-dark mt-5 sticky-footer">
-                    <div className="footer-copyright text-center py-3"><span style={{color: "white"}}>Data from Dipartimento della Protezione Civile</span>
-                        <img src={dpc} style={{width: "30px"}} alt=""/>
-                    </div>
+                    <div className="footer-copyright text-center py-2"><span style={{color: "white"}}>Data from Dipartimento della Protezione Civile  <img
+                        src={dpc} style={{width: "30px"}} alt=""/></span>
 
+                    </div>
 
                 </footer>
             </div>
