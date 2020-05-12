@@ -42,7 +42,8 @@ export default class CovidWorldMap extends Component {
             <div>
                 <button type="button" className="btn btn-success change-button"
                         onClick={this.change}>{this.state.show ? "COUNTRIES" : 'TODAY'}</button>
-                <Map center={position} zoom={this.state.zoom} style={{width: "100%", height: "calc(100vh - 64px)"}}>
+                <Map center={position} zoom={this.state.zoom}
+                     style={{paddingTop: '56px', width: "100%", height: "calc(100vh - 56px)"}}>
                     <TileLayer
                         attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

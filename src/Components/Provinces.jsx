@@ -14,14 +14,20 @@ class Provinces extends Component {
 
     componentDidMount() {
         ApiGithub.fetch("dpc-covid19-ita-province-latest.json")
+
             .then(res => {
+                //Iterating through province array
+                //then it's checking if the region is already existing
                 const province = [];
                 res.forEach((p) => {
                     const regione = province.find((region => region.name === p.denominazione_regione));
+                    //if not, adding the region into province array
                     if (regione === undefined) {
                         const newRegion = {name: p.denominazione_regione, province: []};
+                        //then pushing the region to the array
                         newRegion.province.push(p);
                         province.push(newRegion);
+                        //if the region is already existing, then add province to the array
                     } else {
                         regione.province.push(p);
                     }

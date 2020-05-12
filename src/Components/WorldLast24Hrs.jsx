@@ -20,8 +20,8 @@ class WorldLast24Hrs extends Component {
 
 
     componentDidMount() {
-        setTimeout(() => {
-            ApiWorld.fetch("countries?yesterday=true")
+
+        ApiWorld.fetch("countries?yesterday=true")
                 .then(res => {
                     res.map((i, index) => {
                         i.id = index;
@@ -32,7 +32,7 @@ class WorldLast24Hrs extends Component {
                         data: res
                     })
                 })
-        }, 3000)
+
     }
 
     render() {
