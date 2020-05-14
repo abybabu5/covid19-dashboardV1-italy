@@ -63,10 +63,10 @@ class Regioni extends Component {
             },
         ];
         return (
-            <div className="container mt-5 accordion-div">
-                <div className="row">
+            <div className="container-fluid mt-5">
+                <div className="row accordion-div">
                     <div className="col-md-12">
-                        <Accordion className="pr-1">
+                        <Accordion className="">
                             <Card>
                                 <Card.Header>
                                     <Accordion.Toggle as={Button} variant="link" eventKey="0">

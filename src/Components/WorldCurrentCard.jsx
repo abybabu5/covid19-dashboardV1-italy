@@ -74,9 +74,8 @@ class WorldCurrentCard extends Component {
 
         return (
             <div className="container align-content-center italy-container">
-                <div className="row mb-2 mt-2">
-                </div>
-                <div className="row d-flex align-content-center position-sticky" style={{top: "100px"}}>
+
+            <div className="row d-flex align-content-center position-sticky" style={{top: "100px"}}>
                     <div className="col-md-12 mb-3">
                         <div className="row">
                             <div className="col-md-3">

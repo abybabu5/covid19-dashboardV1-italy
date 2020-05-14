@@ -7,6 +7,7 @@ import CovidMap from "./Map";
 import Footer from "./Footer";
 import CovidWorldMap from "./WorldMap";
 import WorldLast24Hrs from "./WorldLast24Hrs";
+import ViewChart from "./ViewChart";
 
 
 class Main extends Component {
@@ -28,7 +29,9 @@ class Main extends Component {
                         <Route path="/world"><World/></Route>
                         <Route path="/world-last-24-hours"><WorldLast24Hrs/></Route>
                         <Route path="/map/italy"><CovidMap/></Route>
+                        <Route path="/chart"><ViewChart/></Route>
                         <Route path="/map/world"><CovidWorldMap/></Route>
+
                     </Switch>
 
                 </div>

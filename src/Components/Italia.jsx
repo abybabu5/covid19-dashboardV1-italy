@@ -42,7 +42,7 @@ class Italia extends Component {
                 </div>)
         }
         return (
-            <div className="container align-content-center italy-container">
+            <div className="container align-content-center italy-container d-flex flex-column">
                 <div className="row mb-2 mt-5">
                     <div className="col-md-12 d-flex justify-content-center align-items-center">
                         <div className="map-italy mr-2 mt-3 mb-3">
@@ -104,25 +104,26 @@ class Italia extends Component {
                                 </Card>
                             </div>
                         </div>
-                        <div>
-                            <Regioni/>
+
+                        <Regioni/>
+                        <div className="container-fluid">
+                            <Accordion className="accordion-div-province">
+                                <Card>
+                                    <Card.Header>
+                                        <Accordion.Toggle as={Button} variant="link" eventKey="1">
+                                            <div className="mt-2 mb-2"><h3>List of Provinces in the Region</h3></div>
+                                        </Accordion.Toggle>
+                                    </Card.Header>
+                                    <Accordion.Collapse eventKey="1">
+                                        <Card.Body>
+                                            <div>
+                                                <Provinces/>
+                                            </div>
+                                        </Card.Body>
+                                    </Accordion.Collapse>
+                                </Card>
+                            </Accordion>
                         </div>
-                        <Accordion className="accordion-div-province">
-                            <Card>
-                                <Card.Header>
-                                    <Accordion.Toggle as={Button} variant="link" eventKey="1">
-                                        <div className="mt-2 mb-2"><h3>List of Provinces in the Region</h3></div>
-                                    </Accordion.Toggle>
-                                </Card.Header>
-                                <Accordion.Collapse eventKey="1">
-                                    <Card.Body>
-                                        <div>
-                                            <Provinces/>
-                                        </div>
-                                    </Card.Body>
-                                </Accordion.Collapse>
-                            </Card>
-                        </Accordion>
                     </div>
                 </div>
             </div>

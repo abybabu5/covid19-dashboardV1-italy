@@ -66,7 +66,7 @@ class Provinces extends Component {
             }
         ];
         return (
-            <div className="container mt-1 accordion-div">
+            <div className="container-fluid mt-1">
                 <div className="row">
                     <div className="col-md-12">
                         {this.state.provinceDati.map((regione) => {

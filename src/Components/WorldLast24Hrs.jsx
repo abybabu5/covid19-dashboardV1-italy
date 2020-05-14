@@ -84,9 +84,9 @@ class WorldLast24Hrs extends Component {
             }
         ];
         return (
-            <div className="container mt-3 align-content-center">
+            <div className="container mt-3 align-content-center d-block">
                 <div className="container justify-content-center d-flex">
-                    <div className="world-map">
+                    <div className="world-map mb-3">
                         <Link to="/map/world">
                             <img style={{width: "300px"}} src={worldMap} alt=""/>
                         </Link>
@@ -95,7 +95,7 @@ class WorldLast24Hrs extends Component {
                 <WorldCurrentCard/>
                 <div className="row">
                     <div className="col-md-12">
-                        <Accordion className="pr-1">
+                        <Accordion className="">
                             <Card>
                                 <Card.Header>
                                     <Accordion.Toggle as={Button} variant="link" eventKey="0">

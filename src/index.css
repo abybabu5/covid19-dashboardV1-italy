@@ -27,13 +27,13 @@ h1, h3 {
 }
 
 .accordion-div {
-    margin-left: -6px !important;
+
 }
 
-.accordion-div-province {
-    margin-left: 9px !important;
-    margin-right: 24px !important;
-}
+/*.accordion-div-province {*/
+/*    margin-left: 9px !important;*/
+/*    margin-right: 24px !important;*/
+/*}*/
 
 h4 {
     color: black;
@@ -86,7 +86,7 @@ h4 {
 }
 
 .italy-container {
-    padding-bottom: 56px;
+    /*padding-bottom: 56px;*/
 }
 
 .search-bar {
@@ -99,6 +99,7 @@ h4 {
 
 .card {
     margin-top: 10px;
+    border-radius: .50rem !important;
 }
 
 .corona-nav-img {
