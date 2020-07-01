@@ -59,6 +59,7 @@ export default class CovidMap extends Component {
                         </Marker>
                     })}
                     {this.state.show && this.state.provinceDati.map((item) => {
+                        if (!item.lat) return null;
                         return <Marker position={[item.lat, item.long]} icon={this.myIcon}>
                             <Popup>
                                 <div align="center"><b>{item.denominazione_provincia}</b></div>
