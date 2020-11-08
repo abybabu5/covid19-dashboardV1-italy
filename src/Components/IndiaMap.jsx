@@ -27,8 +27,6 @@ export default class CovidIndiaMap extends Component {
     });
 
     componentDidMount() {
-        ApiWorld.fetch("countries/india")
-            .then(res => this.setState({res}))
         ApiIndia.fetch("state_district_wise.json")
             .then(res => this.setState({res}))
     }

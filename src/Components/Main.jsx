@@ -32,7 +32,7 @@ class Main extends Component {
                         <Route path="/india"><India/></Route>
                         <Route path="/world-last-24-hours"><WorldLast24Hrs/></Route>
                         <Route path="/map/italy"><CovidMap/></Route>
-                        <Route path="/map/india"><CovidIndiaMap/></Route>
+                        {/*<Route path="/map/india"><CovidIndiaMap/></Route>*/}
                         <Route path="/chart"><ViewChart/></Route>
                         <Route path="/map/world"><CovidWorldMap/></Route>
 

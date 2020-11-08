@@ -52,10 +52,10 @@ class India extends Component {
                 <div className="row mb-2 mt-5">
                     <div className="col-md-12 d-flex justify-content-center align-items-center">
                         <div className="map-italy mr-2 mt-3 mb-3">
-                            <Link to="/map/india">
-                                {/*<img style={{width: "100px"}} src={mapItalia} alt=""/>*/}
+                            {/*<Link to="/india">*/}
+                            {/*<img style={{width: "100px"}} src={mapItalia} alt=""/>*/}
                                 <img src="https://www.countryflags.io/in/shiny/64.png"/>
-                            </Link>
+                            {/*</Link>*/}
                         </div>
                         <div><h1 style={{color: "white"}}>INDIA</h1></div>
                     </div>
