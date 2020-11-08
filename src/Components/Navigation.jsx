@@ -20,6 +20,7 @@ class Navigation extends Component {
                     </Navbar.Brand>
                     <Nav className="mr-auto">
                         <Link className="nav-link" to="/italia">Italy</Link>
+                        <Link className="nav-link" to="/india">India</Link>
                         <Link className="nav-link" to="/world">World</Link>
 
                     </Nav>
