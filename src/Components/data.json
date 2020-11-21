@@ -1,0 +1,32 @@
+{
+  "updated": 1604839668374,
+  "country": "India",
+  "countryInfo": {
+    "_id": 356,
+    "iso2": "IN",
+    "iso3": "IND",
+    "lat": 20,
+    "long": 77,
+    "flag": "https://disease.sh/assets/img/flags/in.png"
+  },
+  "cases": 8507754,
+  "todayCases": 551,
+  "deaths": 126162,
+  "todayDeaths": 0,
+  "recovered": 7868968,
+  "todayRecovered": 1677,
+  "active": 512624,
+  "critical": 8944,
+  "casesPerOneMillion": 6144,
+  "deathsPerOneMillion": 91,
+  "tests": 117736791,
+  "testsPerOneMillion": 85021,
+  "population": 1384789745,
+  "continent": "Asia",
+  "oneCasePerPeople": 163,
+  "oneDeathPerPeople": 10976,
+  "oneTestPerPeople": 12,
+  "activePerOneMillion": 370.18,
+  "recoveredPerOneMillion": 5682.43,
+  "criticalPerOneMillion": 6.46
+}

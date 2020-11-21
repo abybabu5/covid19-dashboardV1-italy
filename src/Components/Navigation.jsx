@@ -16,12 +16,12 @@ class Navigation extends Component {
                                                alt=""/></div>
                     <Navbar.Brand>
                         <Link className="covid-19" to="/world-last-24-hours"
-                              style={{textDecoration: "none", color: "white"}}>Covid-19</Link>
+                              style={{textDecoration: "none", color: "white"}}>COVID-19</Link>
                     </Navbar.Brand>
                     <Nav className="mr-auto">
-                        <Link className="nav-link" to="/italia">Italy</Link>
-                        <Link className="nav-link" to="/india">India</Link>
-                        <Link className="nav-link" to="/world">World</Link>
+                        <Link className="nav-link" to="/italia">ITALY</Link>
+                        <Link className="nav-link" to="/india">INDIA</Link>
+                        <Link className="nav-link" to="/world">WORLD</Link>
 
                     </Nav>
                     <Form inline>
