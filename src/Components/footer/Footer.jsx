@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import dpc from "../images/dpc.png"
+import dpc from "../../images/dpc.png"
 
 
 class Footer extends Component {

@@ -1,14 +1,10 @@
 import React, {Component} from 'react';
-import {Card, Button} from 'react-bootstrap';
-import Regioni from "./Regioni";
-import ApiIndia from "../Api/ApiIndia";
-import mapItalia from "../images/map-italia.png";
-import Provinces from "./Provinces";
-import Accordion from "react-bootstrap/Accordion";
-import Loader from "../loder/Loader";
-import {Link} from "react-router-dom";
-import {ApiWorld} from "../Api/ApiWorld";
+import {Card} from 'react-bootstrap';
+import Loader from "../../../loder/Loader";
+import {ApiWorld} from "../../../Api/ApiWorld";
 import IndiaSates from "./IndiaSates";
+import {Typography} from "@material-ui/core";
+import CountUp from "react-countup";
 
 
 class India extends Component {
@@ -67,9 +63,14 @@ class India extends Component {
                                 <Card className="badge badge-info" style={{width: '15rem'}}>
                                     <Card.Body className="text-center">
                                         <Card.Title>TOTAL CASES</Card.Title>
-                                        <h3>{this.state.stateData.cases}</h3>
+                                        {/*<h3>{this.state.stateData.cases}</h3>*/}
+                                        <Typography variant="h4">
+                                            <CountUp delay={0} start={0} end={this.state.stateData.cases} duration={2.5}  separator=","/>
+                                        </Typography>
                                         <Card.Text>
-                                            [Today : {this.state.stateData.todayCases}]
+                                            <div className="mt-2">
+                                            [Today : <CountUp delay={0} start={0} end={this.state.stateData.todayCases} duration={2.5}  separator=","/>]
+                                            </div>
                                         </Card.Text>
                                     </Card.Body>
                                 </Card>
@@ -78,10 +79,15 @@ class India extends Component {
                                 <Card className="badge badge-warning" style={{width: '15rem'}}>
                                     <Card.Body className="text-center">
                                         <Card.Title>ACTIVE CASES</Card.Title>
-                                        <h3>{this.state.stateData.active}</h3>
+                                        {/*<h3>{this.state.stateData.active}</h3>*/}
+                                        <Typography variant="h4">
+                                            <CountUp delay={0} start={0} end={this.state.stateData.active} duration={2.5}  separator=","/>
+                                        </Typography>
                                         <Card.Text>
-                                            [Today
-                                            : {this.state.stateData.todayCases - this.state.stateData.todayRecovered}]
+                                            <div className="mt-2">
+                                                [Today
+                                                : <CountUp delay={0} start={0} end={this.state.stateData.todayCases - this.state.stateData.todayRecovered} duration={2.5}  separator=","/>]
+                                            </div>
                                         </Card.Text>
                                     </Card.Body>
                                 </Card>
@@ -90,10 +96,15 @@ class India extends Component {
                                 <Card className="badge badge-success" style={{width: '15rem'}}>
                                     <Card.Body className="text-center">
                                         <Card.Title>RECOVERED</Card.Title>
-                                        <h3>{this.state.stateData.recovered}</h3>
+                                        {/*<h3>{this.state.stateData.recovered}</h3>*/}
+                                        <Typography variant="h4">
+                                            <CountUp delay={0} start={0} end={this.state.stateData.recovered} duration={2.5}  separator=","/>
+                                        </Typography>
                                         <Card.Text>
+                                            <div className="mt-2">
                                             [Today
-                                            : {this.state.stateData.todayRecovered}]
+                                            : <CountUp delay={0} start={0} end= {this.state.stateData.todayRecovered} duration={2.5}  separator=","/>]
+                                            </div>
                                         </Card.Text>
                                     </Card.Body>
                                 </Card>
@@ -102,10 +113,15 @@ class India extends Component {
                                 <Card className="badge badge-danger" style={{width: '15rem'}}>
                                     <Card.Body className="text-center">
                                         <Card.Title>DEATHS</Card.Title>
-                                        <h3>{this.state.stateData.deaths}</h3>
+                                        {/*<h3>{this.state.stateData.deaths}</h3>*/}
+                                        <Typography variant="h4">
+                                            <CountUp delay={0} start={0} end={this.state.stateData.deaths} duration={2.5}  separator=","/>
+                                        </Typography>
                                         <Card.Text>
+                                            <div className="mt-2">
                                             [Today
-                                            : {this.state.stateData.todayDeaths}]
+                                            : <CountUp delay={0} start={0} end={this.state.stateData.todayDeaths} duration={2.5}  separator=","/>]
+                                            </div>
                                         </Card.Text>
                                     </Card.Body>
                                 </Card>

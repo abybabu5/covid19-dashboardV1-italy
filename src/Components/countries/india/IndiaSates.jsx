@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import ApiIndia from "../Api/ApiIndia";
+import ApiIndia from "../../../Api/ApiIndia";
 import {Accordion, Button, Card} from "react-bootstrap";
-import {SearchableTable} from "./SearchableTable";
-import Loader from "../loder/Loader";
+import {SearchableTable} from "../../tables/SearchableTable";
+import Loader from "../../../loder/Loader";
 
 
 class IndiaSates extends Component {

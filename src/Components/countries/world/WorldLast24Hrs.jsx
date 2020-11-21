@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-import ApiWorld from "../Api/ApiWorld";
-import Loader from "../loder/Loader";
+import ApiWorld from "../../../Api/ApiWorld";
+import Loader from "../../../loder/Loader";
 import 'react-bootstrap-table2-toolkit/dist/react-bootstrap-table2-toolkit.min.css';
-import {SearchableTable} from "./SearchableTable";
+import {SearchableTable} from "../../tables/SearchableTable";
 import {Accordion, Button, Card} from "react-bootstrap";
-import worldMap from "../images/world-map-update.png"
+import worldMap from "../../../images/world-map-update.png"
 import {Link} from "react-router-dom";
 import WorldCurrentCard from "./WorldCurrentCard";
 

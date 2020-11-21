@@ -1,15 +1,15 @@
 import React, {Component} from 'react';
 import {Switch, Route, BrowserRouter as Router} from 'react-router-dom';
-import Navigation from "./Navigation"
-import Italia from "./Italia";
-import World from "./World";
-import India from "./India";
-import CovidMap from "./Map";
-import Footer from "./Footer";
-import CovidWorldMap from "./WorldMap";
-import WorldLast24Hrs from "./WorldLast24Hrs";
-import ViewChart from "./ViewChart";
-import CovidIndiaMap from "./IndiaMap";
+import Navigation from "./header/Navigation"
+import Italia from "./countries/italia/Italia";
+import World from "./countries/world/World";
+import India from "./countries/india/India";
+import CovidMap from "./maps/Map";
+import Footer from "./footer/Footer";
+import CovidWorldMap from "./maps/WorldMap";
+import WorldLast24Hrs from "./countries/world/WorldLast24Hrs";
+import ViewChart from "./charts/ViewChart";
+import CovidIndiaMap from "./countries/india/IndiaMap";
 
 
 class Main extends Component {

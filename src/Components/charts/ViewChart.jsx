@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import ChartCountryPicker from '../Components/ChartCountryPicker';
-import Chart from "../Components/Chart";
-import {fetchData} from "../Api/ApiWorldChart";
+import ChartCountryPicker from './ChartCountryPicker';
+import Chart from "./Chart";
+import {fetchData} from "../../Api/ApiWorldChart";
 
 
 class ViewChart extends Component {

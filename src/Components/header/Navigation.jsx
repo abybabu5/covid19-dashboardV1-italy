@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import Nav from "react-bootstrap/Nav";
 import Form from "react-bootstrap/Form";
-import corona from "../icon/iconfinder_SocialDistancing-coronavirus-corona-covid19-safe_6071810.svg"
+import corona from "../../icon/iconfinder_SocialDistancing-coronavirus-corona-covid19-safe_6071810.svg"
 import Navbar from "react-bootstrap/Navbar";
 import {Link} from "react-router-dom";
-import chartIcon from "../icon/iconfinder_f-analytics_256_282476.png"
+import chartIcon from "../../icon/iconfinder_f-analytics_256_282476.png"
 
 class Navigation extends Component {
     render() {

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import ApiGithub from "../Api/ApiGithub";
+import ApiGithub from "../../../Api/ApiGithub";
 import {Accordion, Button, Card} from "react-bootstrap";
-import {SearchableTable} from "./SearchableTable";
+import {SearchableTable} from "../../tables/SearchableTable";
 
 class Provinces extends Component {
     constructor() {

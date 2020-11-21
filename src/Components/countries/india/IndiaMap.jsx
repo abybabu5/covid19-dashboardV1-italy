@@ -1,17 +1,19 @@
 import React, {Component} from 'react'
 import {Map, TileLayer, Marker, Popup} from 'react-leaflet'
-import ApiWorld from "../Api/ApiWorld";
+import ApiGithub from "../../../Api/ApiGithub";
 import * as L from "leaflet";
+import {ApiWorld} from "../../../Api/ApiWorld";
+import ApiIndia from "../../../Api/ApiIndia";
 
 
-export default class CovidWorldMap extends Component {
+export default class CovidIndiaMap extends Component {
 
     state = {
-        lat: 15.334792,
-        lng: 18.670218,
-        zoom: 3,
-        data: [],
-        current: [],
+        lat: 28.644800,
+        lng: 77.216721,
+        zoom: 6,
+        regioniDati: [],
+        provinceDati: [],
         show: false
     }
     myIcon = L.icon({
@@ -25,10 +27,8 @@ export default class CovidWorldMap extends Component {
     });
 
     componentDidMount() {
-        ApiWorld.fetch("countries")
-            .then(res => this.setState({data: res}))
-        ApiWorld.fetch("countries?yesterday=true")
-            .then(res => this.setState({current: res}))
+        ApiIndia.fetch("state_district_wise.json")
+            .then(res => this.setState({res}))
     }
 
     change = () => {

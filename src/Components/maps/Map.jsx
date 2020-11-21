@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {Map, TileLayer, Marker, Popup} from 'react-leaflet'
-import ApiGithub from "../Api/ApiGithub";
+import ApiGithub from "../../Api/ApiGithub";
 import * as L from "leaflet";
 
 

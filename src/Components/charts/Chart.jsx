@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {Line, Bar} from 'react-chartjs-2';
-import {fetchDailyData} from '../Api/ApiWorldChart';
+import {fetchDailyData} from '../../Api/ApiWorldChart';
 import "./Chart.scss";
 
 
