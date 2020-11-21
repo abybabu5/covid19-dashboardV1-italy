@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import ApiIndia from "../../../Api/ApiIndia";
 import {Accordion, Button, Card} from "react-bootstrap";
 import {SearchableTable} from "../../tables/SearchableTable";
-import Loader from "../../../loader/Loader";
+import Loader from "../../../loder/Loader";
 import {ReactComponent as Arrow} from '../../../icon/iconfinder_arrow-dropdown_3017945.svg';
 
 

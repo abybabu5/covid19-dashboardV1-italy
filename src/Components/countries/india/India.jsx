@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Card} from 'react-bootstrap';
-import Loader from "../../../loader/Loader";
+import Loader from "../../../loder/Loader";
 import {ApiWorld} from "../../../Api/ApiWorld";
 import IndiaSates from "./IndiaSates";
 import {Typography} from "@material-ui/core";

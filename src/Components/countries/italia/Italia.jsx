@@ -5,7 +5,7 @@ import ApiGithub from "../../../Api/ApiGithub";
 import mapItalia from "../../../images/map-italia.png"
 import Provinces from "./Provinces";
 import Accordion from "react-bootstrap/Accordion";
-import Loader from "../../../loader/Loader";
+import Loader from "../../../loder/Loader";
 import {Link} from "react-router-dom";
 import {Typography} from "@material-ui/core";
 import CountUp from "react-countup";
