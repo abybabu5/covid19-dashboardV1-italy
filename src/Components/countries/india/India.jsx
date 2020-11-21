@@ -12,10 +12,7 @@ class India extends Component {
         super();
         this.state = {
             loading: true,
-            stateData: {},
-            // today: [],
-            // yesterday: []
-
+            stateData: {}
         }
     }
 
@@ -48,10 +45,7 @@ class India extends Component {
                 <div className="row mb-2 mt-5">
                     <div className="col-md-12 d-flex justify-content-center align-items-center">
                         <div className="map-italy mr-2 mt-3 mb-3">
-                            {/*<Link to="/india">*/}
-                            {/*<img style={{width: "100px"}} src={mapItalia} alt=""/>*/}
                                 <img src="https://www.countryflags.io/in/shiny/64.png"/>
-                            {/*</Link>*/}
                         </div>
                         <div><h1 style={{color: "white"}}>INDIA</h1></div>
                     </div>
@@ -63,7 +57,6 @@ class India extends Component {
                                 <Card className="badge badge-info" style={{width: '15rem'}}>
                                     <Card.Body className="text-center">
                                         <Card.Title>TOTAL CASES</Card.Title>
-                                        {/*<h3>{this.state.stateData.cases}</h3>*/}
                                         <Typography variant="h4">
                                             <CountUp delay={0} start={0} end={this.state.stateData.cases} duration={2.5}  separator=","/>
                                         </Typography>
@@ -79,7 +72,6 @@ class India extends Component {
                                 <Card className="badge badge-warning" style={{width: '15rem'}}>
                                     <Card.Body className="text-center">
                                         <Card.Title>ACTIVE CASES</Card.Title>
-                                        {/*<h3>{this.state.stateData.active}</h3>*/}
                                         <Typography variant="h4">
                                             <CountUp delay={0} start={0} end={this.state.stateData.active} duration={2.5}  separator=","/>
                                         </Typography>
@@ -96,7 +88,6 @@ class India extends Component {
                                 <Card className="badge badge-success" style={{width: '15rem'}}>
                                     <Card.Body className="text-center">
                                         <Card.Title>RECOVERED</Card.Title>
-                                        {/*<h3>{this.state.stateData.recovered}</h3>*/}
                                         <Typography variant="h4">
                                             <CountUp delay={0} start={0} end={this.state.stateData.recovered} duration={2.5}  separator=","/>
                                         </Typography>
@@ -113,7 +104,6 @@ class India extends Component {
                                 <Card className="badge badge-danger" style={{width: '15rem'}}>
                                     <Card.Body className="text-center">
                                         <Card.Title>DEATHS</Card.Title>
-                                        {/*<h3>{this.state.stateData.deaths}</h3>*/}
                                         <Typography variant="h4">
                                             <CountUp delay={0} start={0} end={this.state.stateData.deaths} duration={2.5}  separator=","/>
                                         </Typography>

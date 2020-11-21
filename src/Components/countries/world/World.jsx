@@ -14,7 +14,6 @@ class World extends Component {
         }
     }
 
-
     componentDidMount() {
         setTimeout(() => {
             ApiWorld.fetch("countries")

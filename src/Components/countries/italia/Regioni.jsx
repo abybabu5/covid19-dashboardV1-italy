@@ -3,6 +3,7 @@ import ApiGithub from "../../../Api/ApiGithub";
 import {Accordion, Button, Card} from "react-bootstrap";
 import 'react-bootstrap-table2-toolkit/dist/react-bootstrap-table2-toolkit.min.css';
 import {SearchableTable} from "../../tables/SearchableTable";
+import {ReactComponent as Arrow} from "../../../icon/iconfinder_arrow-dropdown_3017945.svg";
 
 class Regioni extends Component {
     constructor() {
@@ -69,10 +70,15 @@ class Regioni extends Component {
                         <Accordion className="">
                             <Card>
                                 <Card.Header>
-                                    <Accordion.Toggle as={Button} variant="link" eventKey="0">
-                                        <div className="d-flex">
-                                            <div className="p-1 mr-2">
-                                                <div><h3>List of Regions in Italy</h3></div>
+                                    <Accordion.Toggle as={Button} variant="link" eventKey="0" style={{width: '100%'}}>
+                                        <div className="p-1 mr-2">
+                                            <div className="d-flex">
+                                                <div className="mt-2 mb-2 mr-5 flex-grow-1 text-left">
+                                                    <h3>List of Regions in Italy</h3>
+                                                </div>
+                                                <div className="mb-2">
+                                                    <Arrow/>
+                                                </div>
                                             </div>
                                         </div>
                                     </Accordion.Toggle>
@@ -80,15 +86,12 @@ class Regioni extends Component {
                                 <Accordion.Collapse eventKey="0">
                                     <Card.Body>
                                         <SearchableTable data={this.state.data} columns={columns}/>
-
                                     </Card.Body>
                                 </Accordion.Collapse>
                             </Card>
-
                         </Accordion>
                     </div>
                 </div>
-
             </div>
         );
     }

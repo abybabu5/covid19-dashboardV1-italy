@@ -74,7 +74,8 @@ class Provinces extends Component {
                                 <Accordion className="pr-1 mt-1">
                                     <Card>
                                         <Card.Header>
-                                            <Accordion.Toggle as={Button} variant="link" eventKey="0">
+                                            <Accordion.Toggle as={Button} variant="link" eventKey="0"
+                                                              style={{width: '100%'}}>
                                                 <div className="d-flex">
                                                     <div className="p-1 mr-2">
                                                         <div><h3>{regione.name}</h3></div>
@@ -97,5 +98,4 @@ class Provinces extends Component {
         );
     }
 }
-
 export default Provinces;

@@ -7,6 +7,7 @@ import {Accordion, Button, Card} from "react-bootstrap";
 import worldMap from "../../../images/world-map-update.png"
 import {Link} from "react-router-dom";
 import WorldCurrentCard from "./WorldCurrentCard";
+import {ReactComponent as Arrow} from '../../../icon/iconfinder_arrow-dropdown_3017945.svg';
 
 
 class WorldLast24Hrs extends Component {
@@ -98,10 +99,13 @@ class WorldLast24Hrs extends Component {
                         <Accordion className="">
                             <Card>
                                 <Card.Header>
-                                    <Accordion.Toggle as={Button} variant="link" eventKey="0">
+                                    <Accordion.Toggle as={Button} variant="link" eventKey="0" style={{width: '100%'}}>
                                         <div className="d-flex">
-                                            <div className="p-1 mr-2">
-                                                <div><h3>World Today</h3></div>
+                                            <div className="mt-2 mb-2 flex-grow-1 text-left">
+                                                <h3>World Today</h3>
+                                            </div>
+                                            <div className="mb-2" style={{marginRight: "10px"}}>
+                                                <Arrow/>
                                             </div>
                                         </div>
                                     </Accordion.Toggle>

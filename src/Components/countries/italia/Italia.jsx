@@ -9,7 +9,7 @@ import Loader from "../../../loder/Loader";
 import {Link} from "react-router-dom";
 import {Typography} from "@material-ui/core";
 import CountUp from "react-countup";
-
+import {ReactComponent as Arrow} from '../../../icon/iconfinder_arrow-dropdown_3017945.svg';
 
 
 class Italia extends Component {
@@ -51,7 +51,6 @@ class Italia extends Component {
                         <div className="map-italy mr-2 mt-3 mb-3">
                             <Link to="/map/italy">
                                 <img style={{width: "100px"}} src={mapItalia} alt=""/>
-                                {/*<img src="https://www.countryflags.io/it/shiny/64.png" />*/}
                             </Link>
                         </div>
                         <div><h1 style={{color: "white"}}>ITALY</h1></div>
@@ -64,15 +63,17 @@ class Italia extends Component {
                                 <Card className="badge badge-info" style={{width: '15rem'}}>
                                     <Card.Body className="text-center">
                                         <Card.Title>TOTAL CASES</Card.Title>
-                                        {/*<h3>{this.state.today.totale_casi}</h3>*/}
                                         <Typography variant="h4">
-                                            <CountUp delay={0} start={0} end={this.state.today.totale_casi} duration={2.5}  separator=","/>
+                                            <CountUp delay={0} start={0} end={this.state.today.totale_casi}
+                                                     duration={2.5} separator=","/>
                                         </Typography>
                                         <Card.Text>
                                             <div className="mt-2">
-                                            [Today : <CountUp delay={0} start={0} end={this.state.today.totale_casi - this.state.yesterday.totale_casi} duration={2.5}  separator=","/>]
+                                                [Today : <CountUp delay={0} start={0}
+                                                                  end={this.state.today.totale_casi - this.state.yesterday.totale_casi}
+                                                                  duration={2.5} separator=","/>]
                                             </div>
-                                            </Card.Text>
+                                        </Card.Text>
                                     </Card.Body>
                                 </Card>
                             </div>
@@ -80,16 +81,18 @@ class Italia extends Component {
                                 <Card className="badge badge-warning" style={{width: '15rem'}}>
                                     <Card.Body className="text-center">
                                         <Card.Title>ACTIVE CASES</Card.Title>
-                                        {/*<h3>{this.state.today.totale_positivi}</h3>*/}
                                         <Typography variant="h4">
-                                            <CountUp delay={0} start={0} end={this.state.today.totale_positivi} duration={2.5}  separator=","/>
+                                            <CountUp delay={0} start={0} end={this.state.today.totale_positivi}
+                                                     duration={2.5} separator=","/>
                                         </Typography>
                                         <Card.Text>
                                             <div className="mt-2">
-                                            [Today
-                                            : <CountUp delay={0} start={0} end={this.state.today.totale_positivi - this.state.yesterday.totale_positivi} duration={2.5}  separator=","/>]
+                                                [Today
+                                                : <CountUp delay={0} start={0}
+                                                           end={this.state.today.totale_positivi - this.state.yesterday.totale_positivi}
+                                                           duration={2.5} separator=","/>]
                                             </div>
-                                            </Card.Text>
+                                        </Card.Text>
                                     </Card.Body>
                                 </Card>
                             </div>
@@ -97,14 +100,16 @@ class Italia extends Component {
                                 <Card className="badge badge-success" style={{width: '15rem'}}>
                                     <Card.Body className="text-center">
                                         <Card.Title>RECOVERED</Card.Title>
-                                        {/*<h3>{this.state.today.dimessi_guariti}</h3>*/}
                                         <Typography variant="h4">
-                                            <CountUp delay={0} start={0} end={this.state.today.dimessi_guariti} duration={2.5}  separator=","/>
+                                            <CountUp delay={0} start={0} end={this.state.today.dimessi_guariti}
+                                                     duration={2.5} separator=","/>
                                         </Typography>
                                         <Card.Text>
                                             <div className="mt-2">
-                                            [Today
-                                            : <CountUp delay={0} start={0} end={this.state.today.dimessi_guariti - this.state.yesterday.dimessi_guariti} duration={2.5}  separator=","/>]
+                                                [Today
+                                                : <CountUp delay={0} start={0}
+                                                           end={this.state.today.dimessi_guariti - this.state.yesterday.dimessi_guariti}
+                                                           duration={2.5} separator=","/>]
                                             </div>
                                         </Card.Text>
                                     </Card.Body>
@@ -114,13 +119,15 @@ class Italia extends Component {
                                 <Card className="badge badge-danger" style={{width: '15rem'}}>
                                     <Card.Body className="text-center">
                                         <Card.Title>DEATHS</Card.Title>
-                                        {/*<h3>{this.state.today.deceduti}</h3>*/}
                                         <Typography variant="h4">
-                                            <CountUp delay={0} start={0} end={this.state.today.deceduti} duration={2.5}  separator=","/>
+                                            <CountUp delay={0} start={0} end={this.state.today.deceduti} duration={2.5}
+                                                     separator=","/>
                                         </Typography>
                                         <Card.Text>
                                             <div className="mt-2">
-                                            [Today : <CountUp delay={0} start={0} end={this.state.today.deceduti - this.state.yesterday.deceduti} duration={2.5}  separator=","/>]
+                                                [Today : <CountUp delay={0} start={0}
+                                                                  end={this.state.today.deceduti - this.state.yesterday.deceduti}
+                                                                  duration={2.5} separator=","/>]
                                             </div>
                                         </Card.Text>
                                     </Card.Body>
@@ -133,8 +140,16 @@ class Italia extends Component {
                             <Accordion className="accordion-div-province">
                                 <Card>
                                     <Card.Header>
-                                        <Accordion.Toggle as={Button} variant="link" eventKey="1">
-                                            <div className="mt-2 mb-2"><h3>List of Provinces in the Region</h3></div>
+                                        <Accordion.Toggle as={Button} variant="link" eventKey="1"
+                                                          style={{width: '100%'}}>
+                                            <div className="d-flex">
+                                                <div className="mt-2 mb-2 flex-grow-1 text-left">
+                                                    <h3>List of Provinces in the Region</h3>
+                                                </div>
+                                                <div className="mb-2" style={{marginRight: "10px"}}>
+                                                    <Arrow/>
+                                                </div>
+                                            </div>
                                         </Accordion.Toggle>
                                     </Card.Header>
                                     <Accordion.Collapse eventKey="1">

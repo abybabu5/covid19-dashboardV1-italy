@@ -9,7 +9,6 @@ import Footer from "./footer/Footer";
 import CovidWorldMap from "./maps/WorldMap";
 import WorldLast24Hrs from "./countries/world/WorldLast24Hrs";
 import ViewChart from "./charts/ViewChart";
-import CovidIndiaMap from "./countries/india/IndiaMap";
 
 
 class Main extends Component {
@@ -32,10 +31,8 @@ class Main extends Component {
                         <Route path="/india"><India/></Route>
                         <Route path="/world-last-24-hours"><WorldLast24Hrs/></Route>
                         <Route path="/map/italy"><CovidMap/></Route>
-                        {/*<Route path="/map/india"><CovidIndiaMap/></Route>*/}
                         <Route path="/chart"><ViewChart/></Route>
                         <Route path="/map/world"><CovidWorldMap/></Route>
-
                     </Switch>
 
                 </div>

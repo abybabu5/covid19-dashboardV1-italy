@@ -1,8 +1,6 @@
 import React, {Component} from 'react'
 import {Map, TileLayer, Marker, Popup} from 'react-leaflet'
-import ApiGithub from "../../../Api/ApiGithub";
 import * as L from "leaflet";
-import {ApiWorld} from "../../../Api/ApiWorld";
 import ApiIndia from "../../../Api/ApiIndia";
 
 
@@ -70,7 +68,6 @@ export default class CovidIndiaMap extends Component {
                                 <div align="center"> Recovered till today: {item.recovered}</div>
                                 <div align="center"> Current Critical Cases: {item.critical}</div>
                                 <div align="center"> Today Deaths: {item.todayDeaths}</div>
-
                             </Popup>
                         </Marker>
                     })}

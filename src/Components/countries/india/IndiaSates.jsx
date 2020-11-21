@@ -3,6 +3,7 @@ import ApiIndia from "../../../Api/ApiIndia";
 import {Accordion, Button, Card} from "react-bootstrap";
 import {SearchableTable} from "../../tables/SearchableTable";
 import Loader from "../../../loder/Loader";
+import {ReactComponent as Arrow} from '../../../icon/iconfinder_arrow-dropdown_3017945.svg';
 
 
 class IndiaSates extends Component {
@@ -17,8 +18,8 @@ class IndiaSates extends Component {
         setTimeout(() => {
             ApiIndia.fetch("state_district_wise.json")
                 .then(res => {
-                    // res.data
-                    this.setState({stateData: res})
+                    delete (res['State Unassigned'])
+                    this.setState(({stateData: res}))
                 });
         })
     }
@@ -92,10 +93,14 @@ class IndiaSates extends Component {
                                 return (
                                     <Card>
                                         <Card.Header>
-                                            <Accordion.Toggle as={Button} variant="link" eventKey={key}>
+                                            <Accordion.Toggle as={Button} variant="link" eventKey={key}
+                                                              style={{width: '100%'}}>
                                                 <div className="d-flex">
-                                                    <div className="p-1 mr-2">
-                                                        <div><h3>{item}</h3></div>
+                                                    <div className="mt-2 mb-2 flex-grow-1 text-left">
+                                                        <h3>{item}</h3>
+                                                    </div>
+                                                    <div className="mb-2" style={{marginRight: "10px"}}>
+                                                        <Arrow/>
                                                     </div>
                                                 </div>
                                             </Accordion.Toggle>
@@ -115,5 +120,4 @@ class IndiaSates extends Component {
 
     }
 }
-
 export default IndiaSates;
