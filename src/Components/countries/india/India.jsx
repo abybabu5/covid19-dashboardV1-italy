@@ -12,6 +12,7 @@ class India extends Component {
         super();
         this.state = {
             loading: true,
+            isPresent: false,
             stateData: {}
         }
     }
@@ -26,7 +27,8 @@ class India extends Component {
                         this.setState({
                             stateData: response,
                             loading: false,
-                            today: response[0], yesterday: response[1]
+                            today: response[0], yesterday: response[1],
+                            isPresent: true
                         })
                     })
             }
@@ -109,15 +111,17 @@ class India extends Component {
                                         </Typography>
                                         <Card.Text>
                                             <div className="mt-2">
-                                            [Today
-                                            : <CountUp delay={0} start={0} end={this.state.stateData.todayDeaths} duration={2.5}  separator=","/>]
+                                                [Today
+                                                : <CountUp delay={0} start={0} end={this.state.stateData.todayDeaths}
+                                                           duration={2.5} separator=","/>]
                                             </div>
                                         </Card.Text>
                                     </Card.Body>
                                 </Card>
                             </div>
                         </div>
-                        <IndiaSates/>
+                        {this.state.isPresent &&
+                        <IndiaSates/>}
                     </div>
                 </div>
             </div>

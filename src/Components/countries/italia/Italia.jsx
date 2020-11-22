@@ -17,6 +17,7 @@ class Italia extends Component {
         super();
         this.state = {
             loading: true,
+            isPresent: false,
             today: [],
             yesterday: []
 
@@ -30,6 +31,7 @@ class Italia extends Component {
                         res.reverse()
                         this.setState({
                             loading: false,
+                            isPresent: true,
                             today: res[0], yesterday: res[1]
                         })
                     })
@@ -135,33 +137,36 @@ class Italia extends Component {
                             </div>
                         </div>
 
-                        <Regioni/>
-                        <div className="container-fluid">
-                            <Accordion className="accordion-div-province">
-                                <Card>
-                                    <Card.Header>
-                                        <Accordion.Toggle as={Button} variant="link" eventKey="1"
-                                                          style={{width: '100%'}}>
-                                            <div className="d-flex">
-                                                <div className="mt-2 mb-2 flex-grow-1 text-left">
-                                                    <h3>List of Provinces in the Region</h3>
+                        {this.state.isPresent &&
+                        <div>
+                            <Regioni/>
+                            <div className="container-fluid">
+                                <Accordion className="accordion-div-province">
+                                    <Card>
+                                        <Card.Header>
+                                            <Accordion.Toggle as={Button} variant="link" eventKey="1"
+                                                              style={{width: '100%'}}>
+                                                <div className="d-flex">
+                                                    <div className="mt-2 mb-2 flex-grow-1 text-left">
+                                                        <h3>List of Provinces in the Region</h3>
+                                                    </div>
+                                                    <div className="mb-2" style={{marginRight: "10px"}}>
+                                                        <Arrow/>
+                                                    </div>
                                                 </div>
-                                                <div className="mb-2" style={{marginRight: "10px"}}>
-                                                    <Arrow/>
+                                            </Accordion.Toggle>
+                                        </Card.Header>
+                                        <Accordion.Collapse eventKey="1">
+                                            <Card.Body>
+                                                <div>
+                                                    <Provinces/>
                                                 </div>
-                                            </div>
-                                        </Accordion.Toggle>
-                                    </Card.Header>
-                                    <Accordion.Collapse eventKey="1">
-                                        <Card.Body>
-                                            <div>
-                                                <Provinces/>
-                                            </div>
-                                        </Card.Body>
-                                    </Accordion.Collapse>
-                                </Card>
-                            </Accordion>
-                        </div>
+                                            </Card.Body>
+                                        </Accordion.Collapse>
+                                    </Card>
+                                </Accordion>
+                            </div>
+                        </div>}
                     </div>
                 </div>
             </div>

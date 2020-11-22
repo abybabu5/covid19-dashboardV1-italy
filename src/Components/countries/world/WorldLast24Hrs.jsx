@@ -15,7 +15,8 @@ class WorldLast24Hrs extends Component {
         super();
         this.state = {
             loading: true,
-            data: []
+            data: [],
+            isPresent: false
         }
     }
 
@@ -30,6 +31,7 @@ class WorldLast24Hrs extends Component {
                     })
                     this.setState({
                         loading: false,
+                        isPresent: true,
                         data: res
                     })
                 })
@@ -94,6 +96,7 @@ class WorldLast24Hrs extends Component {
                     </div>
                 </div>
                 <WorldCurrentCard/>
+                {this.state.isPresent &&
                 <div className="row">
                     <div className="col-md-12">
                         <Accordion className="">
@@ -119,7 +122,7 @@ class WorldLast24Hrs extends Component {
 
                         </Accordion>
                     </div>
-                </div>
+                </div>}
             </div>
         );
     }

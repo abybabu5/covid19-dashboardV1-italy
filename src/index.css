@@ -104,6 +104,15 @@ h4 {
 
 .corona-nav-img {
     padding: 5px 5px 4px 6px;
+    border-radius: 10%;
+    background-color: #FFD700;
+    width: 3vw;
+}
+
+@media only screen and (max-width: 400px) {
+    .corona-nav-img {
+        width: 60px;
+    }
 
 }
 
@@ -113,4 +122,8 @@ h4 {
     margin-bottom: 5px;
     border-radius: 5px;
 
+}
+
+.navbar-collapse {
+    overflow: hidden !important;
 }
